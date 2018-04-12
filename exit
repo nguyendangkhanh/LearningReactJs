@@ -1,0 +1,24 @@
+[33mcommit 97d50c2761ff0175e052bcebb97a406dda36893c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 10631a5 eaef2e4
+Author: nguyendangkhanh <khanh.nv001@gmail.com>
+Date:   Thu Apr 12 23:46:44 2018 +0700
+
+    merge brancheA to master
+
+[33mcommit eaef2e44434c376c7da0aaef9e95b281998f8feb[m[33m ([m[1;31morigin/brancheA[m[33m, [m[1;32mbrancheA[m[33m)[m
+Author: nguyendangkhanh <khanh.nv001@gmail.com>
+Date:   Thu Apr 12 23:20:53 2018 +0700
+
+    create branch
+
+[33mcommit 10631a5bf46a087e2b2bf548faa5220cde0d26ad[m
+Author: nguyendangkhanh <khanh.nv001@gmail.com>
+Date:   Thu Apr 12 23:13:16 2018 +0700
+
+    add project hello react
+
+[33mcommit c103454255c2352e137e6f72a817b4d98edb8ce6[m
+Author: nguyendangkhanh <khanh.nv001@gmail.com>
+Date:   Thu Apr 12 17:05:22 2018 +0700
+
+    Initial commit
