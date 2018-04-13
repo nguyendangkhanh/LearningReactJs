@@ -15,7 +15,7 @@ const Details = (props) => {
 class Clock extends Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date(), comment: 'a' };
+    this.state = { date: new Date()};
     this.countValue = 0;
   }
 
@@ -23,7 +23,6 @@ class Clock extends Component {
     this.setState({
       date: new Date()
     });
-    this.state.comment = "b";
     this.countValue += 1;
   }
 
