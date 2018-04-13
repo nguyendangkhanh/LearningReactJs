@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const Details = (props) => {
+  return (
+      <div> HEHE {props.name}</div>
+  );
+};
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
+          <Details name="Khanh" />
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Xin Chao React - login username</h1> 
         </header>
