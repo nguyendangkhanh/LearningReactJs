@@ -2,76 +2,65 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function Sum(a,b){
-  return a + b;
-}
-
-const funcSum = (a,b) => {
+const funcSum = (a, b) => {
   return a + b;
 }
 
 const Details = (props) => {
   return (
-      <div>{funcSum(2,3)} HEHE {props.name}</div>
+    <div>{funcSum(2, 3)} HEHE {props.name}</div>
   )
 }
 
-class Clock extends Component{
-  constructor(props)
-  {
+class Clock extends Component {
+  constructor(props) {
     super(props);
-    this.state = {date: new Date(), comment: 'a'};
+    this.state = { date: new Date(), comment: 'a' };
     this.countValue = 0;
   }
 
-  tick()
-  {
+  tick() {
     this.setState({
-      date: new Date(),
-      
+      date: new Date()
     });
     this.state.comment = "b";
     this.countValue += 1;
   }
 
-  componentDidMount()
-  {
+  componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(), 1000
     )
   }
 
-  componentWillUnmount()
-  {
+  componentWillUnmount() {
     clearInterval(this.timerID);
   }
 
-  render()
-  {
-    return(
-      <div>Time: {this.state.date.toLocaleTimeString()} + value: {this.countValue} + comment: { this.state.comment}</div>
-      
+  render() {
+    return (
+      <div>Time: {this.state.date.toLocaleTimeString()} + value: {this.countValue} + comment: {this.state.comment}</div>
+
     );
   }
 }
 
-function LoginButton(props){
-  return(
+function LoginButton(props) {
+  return (
     <button onClick={props.onClick}>Login</button>
   );
 }
 
-function LogoutButton(props)
-{
+function LogoutButton(props) {
   return (
     <button onClick={props.onClick}>Logout</button>
   );
 }
 
-class Toggle extends Component{
-  constructor(props){
+class Toggle extends Component {
+  constructor(props) {
     super(props);
-    this.state = {isToggleOn: true, isLoggedIn: false};
+    this.state = { isToggleOn: true, isLoggedIn: false };
 
     this.handleClick = this.handleClick.bind(this);
 
@@ -79,7 +68,7 @@ class Toggle extends Component{
     this.handleLougoutClick = this.handleLougoutClick.bind(this);
   }
 
-  handleLoginClick(){
+  handleLoginClick() {
     this.setState(
       {
         isLoggedIn: true
@@ -87,25 +76,24 @@ class Toggle extends Component{
     );
   }
 
-  handleLougoutClick()
-  {
+  handleLougoutClick() {
     this.setState({
       isLoggedIn: false
     });
   }
 
-  handleClick(){
+  handleClick() {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
   }
 
-  render(){
+  render() {
     const isLoggedIn = this.state.isLoggedIn;
     const button = isLoggedIn ? (<LoginButton onClick={this.handleLougoutClick} />) : (<LogoutButton onClick={this.handleLoginClick} />);
     return (
       <div>
-        <button onClick ={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}</button>
+        <button onClick={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}</button>
         {button};
       </div>
     );
@@ -121,7 +109,7 @@ class App extends Component {
           <Details name="Khanh" />
           <Clock />
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Xin Chao React - login username</h1> 
+          <h1 className="App-title">Xin Chao React - login username</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
